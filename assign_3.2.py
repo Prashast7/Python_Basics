@@ -1,25 +1,25 @@
 # # count frequency
-# my_list = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
-# freq = {}
-# for item in my_list:
-#     if item in freq:
-#         freq[item] += 1
-#     else:
-#         freq[item] = 1
-# print(freq)
+my_list = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+freq = {}
+for item in my_list:
+    if item in freq:
+        freq[item] += 1
+    else:
+        freq[item] = 1
+print(freq)
 
 
 # #Q1. Word Count in a Sentence
-# sentence = "this is a test this is only a test"
+sentence = "this is a test this is only a test"
 
-# # Your code here
-# words = sentence.split()
-# print(words)
-# count = {}
-# for word in words:
-#   word = word.strip()
-#   count[word] = count.get(word,0) + 1 #dictionary.get(key, default_value) SYNTAX
-# print(count) 
+# Your code here
+words = sentence.split()
+print(words)
+count = {}
+for word in words:
+  word = word.strip()
+  count[word] = count.get(word,0) + 1 #dictionary.get(key, default_value) SYNTAX
+print(count) 
 
 
 # Q2. Create Dictionary from Two Lists
@@ -27,23 +27,23 @@
 
 # {key_expr: value_expr for item in iterable} - SYNTAX
 
-# keys = ['name', 'age', 'city']
-# values = ['Alice', 25, 'Delhi'] 
+keys = ['name', 'age', 'city']
+values = ['Alice', 25, 'Delhi'] 
 
-# #dict = {}
-# # for key,value in zip(keys,values):
-# #     dict[key] = value
-# # print(dict)
+dict = {}
+for key,value in zip(keys,values):
+    dict[key] = value
+print(dict)
 
-# dict =  {keys[i]: values[i] for i in range(len(keys))}
-# print(dict)
+dict =  {keys[i]: values[i] for i in range(len(keys))}
+print(dict)
 
 
 
 #Q3. Find the Key with the Maximum Value
-# data = {'Apple': 55, 'Banana': 78, 'Cherry': 43}
-# maximun = max(data, key = data.get)
-# print(maximun)
+data = {'Apple': 55, 'Banana': 78, 'Cherry': 43}
+maximun = max(data, key = data.get)
+print(maximun)
 
 
 
@@ -65,22 +65,22 @@
 # 10,9,9
 
 
-# def fold_sum(arr):
-#     while len(arr) > 1:
-#         mid = len(arr) // 2
-#         first_half = arr[0:mid]
-#         second_half = arr[mid:]
-#         first_half = first_half[::-1]
-#         result = []
-#         for i in range(len(first_half)):
-#             result.append(first_half[i] + second_half[i])
-#         if len(second_half) > len(first_half):
-#             result.append(second_half[-1])
-#         arr = result
-#     return arr[0]
+def fold_sum(arr):
+    while len(arr) > 1:
+        mid = len(arr) // 2
+        first_half = arr[0:mid]
+        second_half = arr[mid:]
+        first_half = first_half[::-1]
+        result = []
+        for i in range(len(first_half)):
+            result.append(first_half[i] + second_half[i])
+        if len(second_half) > len(first_half):
+            result.append(second_half[-1])
+        arr = result
+    return arr[0]
 
-# sum = fold_sum([1,2,3,4,5,6])
-# print(sum)
+sum = fold_sum([1,2,3,4,5,6])
+print(sum)
 
 
 
@@ -96,15 +96,15 @@
 # 120
 
 
-# def multi_reduce(arr):
-#     while len(arr) > 1:
-#         res = []
-#         for i in range(len(arr)-1):
-#             res.append(arr[i] * arr[i+1])
-#         arr = res
-#     return arr[0]
-# x = multi_reduce([2,3,4,5])
-# print(x)
+def multi_reduce(arr):
+    while len(arr) > 1:
+        res = []
+        for i in range(len(arr)-1):
+            res.append(arr[i] * arr[i+1])
+        arr = res
+    return arr[0]
+x = multi_reduce([2,3,4,5])
+print(x)
 
 
 # Q3. Zig-Zag Transformation
