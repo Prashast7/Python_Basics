@@ -1,0 +1,17 @@
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore IDE/project files
+.idea/
+.venv/
+
+# Ignore temporary Excel files
+~$*.xlsx
+
+# Optional: ignore CSVs or logs
+*.log
+*.csv
